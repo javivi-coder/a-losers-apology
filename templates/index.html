@@ -32,7 +32,9 @@
 
 <body>
 
-<form action="/" method="POST">
+<a href="/" style="display:none" id="reset"></a>
+
+<form action="/" method="POST" autocomplete="off">
 
 {% if step == 1 %}
 
@@ -93,7 +95,13 @@
 
     (mira como habia dejado dormir al levi tranquilamente...)</p>
 
-   <img src="/static/levi.jpeg">
+    <img src="/static/levi.jpeg">
+
+<br><br>
+
+<a href="/" style:"font-size:14px;">
+    Volver a empezar
+</a>
 
 
 {% endif %}
