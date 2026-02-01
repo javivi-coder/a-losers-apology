@@ -9,6 +9,7 @@ def index():
 
 
     if request.method == "GET":
+        session.clear()
         session["step"] = 1
         session["no_count"] = 0
 
