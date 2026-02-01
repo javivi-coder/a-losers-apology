@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: white;
+            padding: 30px;
+        }
+
+        img {
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+
+        button {
+            padding: 14px 22px;
+            font-size: 14px;
+            margin: 15px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<form action="/" method="POST">
+
+{% if step == 1 %}
+
+    <img src="/static/portada.jpg">
+
+    <button type="submit" name="action" value="next">
+        Siguiente
+    </button>
+
+
+{% elif step == 2 %}
+
+    <img src="/static/vineta1.jpg">
+
+    <button type="submit" name="action" value="next">
+        Siguiente
+    </button>
+
+
+{% elif step == 3 %}
+
+    <img src="/static/vineta2.jpg">
+
+    <button type="submit" name="action" value="next">
+        Siguiente
+    </button>
+
+
+{% elif step == 4 %}
+
+    <img src="/static/vineta3.jpg">
+
+    <h2>can u forgive me?</h2>
+
+    {% set size = 14 + no_count * 6 %}
+
+    <button type="submit"
+            name="action"
+            value="yes"
+            style="font-size: {{ size }}px;">
+        yup
+    </button>
+
+    <button type="submit" name="action" value="no">
+        nop
+    </button>
+
+
+{% elif step == 5 %}
+
+    <h2>Para mi niño laboratorio</h2>
+
+    <p>Hey, te hice esta cosita porque he estado pensando en todo este rato en lo que hemos hablado y quiero pedirte perdón así muy honestamente y desde mi corazón. Estoy muy arrepentida de haberte hablado así, sé que no estuvo bien y que fui hiriente, que mis palabras las disparé a matar, sé que no fue justo para tí, porque no es coherente al decirte que te quiero, además de que tenías que estar concentrado en tus vacaciones y no debí molestarte así.<br><br>
+
+              Como te he dicho, lo hice desde el miedo, realmente te aprecio y me gustó tanto compartir mi primer mes de vacaciones hablando contigo todo el día todos los días. Sé que soy intensa, y la verdad no lo digo para justificar lo que hice, solo quiero decirte que me da pena la idea de perderte, y que te extrañé más de lo que podía soportar, por eso me pasaba rollos y te juzgaba por cosas que no habías hecho, perdón, estuvo feo.<br><br>
+
+              Me importa bastante lo nuestro y me apena y duele haber sido yo esta vez quién la cagó, te prometo estar trabajando en no reaccionar así, porque no está bien y no quiero hacer cosas que te duelan. No te mando esto para presionarte a hablarme, solo es para que sepas que en verdad te extraño mucho mucho, que estoy arrepentida y que me duele en el corazón no saber de ti y conversar contigo en el día. En verdad quiero que con el tiempo estemos más tranquilos, respeto tu proceso, solo te extraño muchísimo, te juro que en verdad lo hago :c<br><br>
+
+    (mira como habia dejado dormir al levi tranquilamente...)</p>
+
+   <img src="/static/levi.jpeg">
+
+
+{% endif %}
+
+</form>
+
+</body>
+</html>
